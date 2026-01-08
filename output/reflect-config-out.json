@@ -1,0 +1,12 @@
+[
+{
+"name":"polytaint.Untrusted",
+"methods":[
+    {"name":"poly_2","parameterTypes":[]},
+    {"name":"funcD","parameterTypes":["double"]},
+    {"name":"funcA","parameterTypes":[]},
+    {"name":"funcN","parameterTypes":["double","int"]},
+    {"name":"sayHello","parameterTypes":[]}
+]
+}
+]

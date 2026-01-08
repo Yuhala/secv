@@ -1,0 +1,6 @@
+bench_name, nosgx_jvm(ms), nosgx_poly_ni(ms), sgx_poly_ni(ms), scone(ms)
+map_find, 71.8, 37, 189.4, 00
+array_find, 182.2, 94.8, 945.8, 00
+binary_search, 147.4, 88.2, 788.4, 00
+bubble_sort, 318.8, 295.6, 1260.6, 00
+quicksort, 152.6, 50.4, 209.8, 00
