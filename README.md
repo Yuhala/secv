@@ -1,4 +1,30 @@
-# Polytaint tool.
+
+## SecV: Secure Code Partitioning via Multi-Language Secure Values
+SecV is a multi-language partitioning approach for TEE software, e.g., with Intel SGX. It is based on [GraalVM's Truffle framework](https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/), an open source Java library for building programming language implementations. SecV proposes secure AST nodes which can be used to annontate sensitive information in a language-agnostic fashion. The corresponding code is then analyzed with [Polytaint](#polytaint-tool), a Truffle-based program analyzer which we developed that splits the program into trusted and untrusted parts running in and out of an SGX TEE respective.
+
+- This PoC implementation accompanies our Middleware'23 paper:
+```bibtex
+@inproceedings{10.1145/3590140.3629116,
+author = {Yuhala, Peterson and Felber, Pascal and Guiroux, Hugo and Lozi, Jean-Pierre and Tchana, Alain and Schiavoni, Valerio and Thomas, Ga\"{e}l},
+title = {SecV: Secure Code Partitioning via Multi-Language Secure Values},
+year = {2023},
+isbn = {9798400701771},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3590140.3629116},
+doi = {10.1145/3590140.3629116},
+booktitle = {Proceedings of the 24th International Middleware Conference},
+pages = {207–219},
+numpages = {13},
+keywords = {GraalVM, Intel SGX, Java, Managed Execution Environments, Truffle, Trusted Execution Environments},
+location = {Bologna, Italy},
+series = {Middleware '23}
+}
+```
+
+
+
+## Polytaint tool.
 
 - `Polytaint` tool is a Truffle instrumentation taint tracking tool which analyses Polyglot programs to obtain source sections (i.e methods/functions) which access secure types defined by the `SecureL Truffle language implementation`.
 
